@@ -60,7 +60,7 @@ function ShopPage() {
 
         dispatch(fetchingDataFromApi());
 
-    },[]);
+    },[dispatch]);
 
     // all divs of games cards
     let allGames = myState.GamesReducer.map(game =>{
