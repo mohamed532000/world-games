@@ -12,8 +12,6 @@ import VrProducts from "../vr-products/js/VRProducts";
 function ShopPage() {
     let myState = useSelector((state) => state);
     let dispatch = useDispatch();
-
-    let [namesOfCountries , setNamesOfCountries] = useState([]);
     let [userEmail , setUserEmail] = useState("")
 
     useEffect(()=>{
