@@ -9,9 +9,9 @@ function PersonCard(props) {
             <div className="person-info">
                 <h2 className="person-name">{props.personName}</h2>
                 <div className="person-sochial-media">
-                    <a href="#" aria-label="Icon"><i className="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="Icon"><i className="fa-brands fa-facebook"></i></a>
-                    <a href="#" aria-label="Icon"><i className="fa-brands fa-twitter"></i></a>
+                    <a href="/" aria-label="Icon"><i className="fa-brands fa-instagram"></i></a>
+                    <a href="/" aria-label="Icon"><i className="fa-brands fa-facebook"></i></a>
+                    <a href="/" aria-label="Icon"><i className="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
         </div>  

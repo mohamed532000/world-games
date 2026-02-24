@@ -34,28 +34,28 @@ function Footer() {
                         <h5>Phone: +1 (800) 456 37 11</h5>
                         <h5>Email: support@promo-theme.com</h5>
                         <div className="sochial-media-div">
-                            <a href="#" aria-label="Icon"><i className="fa-brands fa-instagram"></i></a>
-                            <a href="#" aria-label="Icon"><i className="fa-brands fa-facebook"></i></a>
-                            <a href="#" aria-label="Icon"><i className="fa-brands fa-twitter"></i></a>
+                            <a href="/" aria-label="Icon"><i className="fa-brands fa-instagram"></i></a>
+                            <a href="/" aria-label="Icon"><i className="fa-brands fa-facebook"></i></a>
+                            <a href="/" aria-label="Icon"><i className="fa-brands fa-twitter"></i></a>
                         </div>
                     </div>
 
 
                     <div className="footer-box recent-posts-div">
                         <h2 className="footer-box-title">Recent Posts</h2>
-                        <h5><a href="#">Kills you slowly</a></h5>
+                        <h5><a href="/">Kills you slowly</a></h5>
                         <p>November 8, 2019</p>
-                        <h5><a href="#">Clout</a></h5>
+                        <h5><a href="/">Clout</a></h5>
                         <p>April 22, 2019</p>
-                        <h5><a href="#">Jerome</a></h5>
+                        <h5><a href="/">Jerome</a></h5>
                         <p>April 22, 2019</p>
                     </div>
 
                     <div className="footer-box recent-comments-div">
                         <h2 className="footer-box-title">Recent Comments</h2>
-                        <h5>Elena Cobsky - <a href="#">Driving Engagement Online</a></h5>
-                        <h5>John Michel - <a href="#">Designing for the web in 2019</a></h5>
-                        <h5>Anton Stockman - <a href="#">Streamlining the path to conversion</a></h5>
+                        <h5>Elena Cobsky - <a href="/">Driving Engagement Online</a></h5>
+                        <h5>John Michel - <a href="/">Designing for the web in 2019</a></h5>
+                        <h5>Anton Stockman - <a href="/">Streamlining the path to conversion</a></h5>
                     </div>
 
                 </div>

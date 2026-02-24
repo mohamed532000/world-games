@@ -34,7 +34,7 @@ function WideBox(props){
                 </>
                 }
 
-                <a className="watch-match-link" href="#">
+                <a className="watch-match-link" href="/">
                     <i className="fa-brands fa-twitch"></i>
                     <h4 className="watch-stream">twitch stream</h4>
                 </a>
