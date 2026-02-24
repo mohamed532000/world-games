@@ -70,9 +70,9 @@ function Home() {
                                         <h2 className="text-title">Games With idea & memorable design</h2>
                                         <button><h3>Watch Now</h3></button>
                                         <div className="social-media">
-                                            <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                                            <a href="#"><i className="fa-brands fa-facebook"></i></a>
-                                            <a href="#"><i className="fa-brands fa-twitter"></i></a>
+                                            <a href="#" aria-label="Icon"><i className="fa-brands fa-instagram"></i></a>
+                                            <a href="#" aria-label="Icon"><i className="fa-brands fa-facebook"></i></a>
+                                            <a href="#" aria-label="Icon"><i className="fa-brands fa-twitter"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -87,9 +87,9 @@ function Home() {
                                         <h2 className="text-title">The New Game & awesome concept.</h2>
                                         <button><h3>Watch Now</h3></button>
                                         <div className="social-media">
-                                            <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                                            <a href="#"><i className="fa-brands fa-facebook"></i></a>
-                                            <a href="#"><i className="fa-brands fa-twitter"></i></a>
+                                            <a href="#" aria-label="Icon"><i className="fa-brands fa-instagram"></i></a>
+                                            <a href="#" aria-label="Icon"><i className="fa-brands fa-facebook"></i></a>
+                                            <a href="#" aria-label="Icon"><i className="fa-brands fa-twitter"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -104,9 +104,9 @@ function Home() {
                                         <h2 className="text-title">Play with us in the all new games.</h2>
                                         <button><h3>Watch Now</h3></button>
                                         <div className="social-media">
-                                            <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                                            <a href="#"><i className="fa-brands fa-facebook"></i></a>
-                                            <a href="#"><i className="fa-brands fa-twitter"></i></a>
+                                            <a href="#" aria-label="Icon"><i className="fa-brands fa-instagram"></i></a>
+                                            <a href="#" aria-label="Icon"><i className="fa-brands fa-facebook"></i></a>
+                                            <a href="#" aria-label="Icon"><i className="fa-brands fa-twitter"></i></a>
                                         </div>
                                     </div>
                                 </div>

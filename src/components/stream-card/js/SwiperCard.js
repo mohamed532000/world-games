@@ -22,7 +22,7 @@ function StreamCard(props) {
                         <h4>{props.streamDate}</h4>
                     </div>
                 </div>
-                <a href="#"></a>
+                <a href="#" aria-label="Anchor"></a>
             </div>
         </>
     )

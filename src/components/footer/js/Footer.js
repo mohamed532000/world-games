@@ -34,9 +34,9 @@ function Footer() {
                         <h5>Phone: +1 (800) 456 37 11</h5>
                         <h5>Email: support@promo-theme.com</h5>
                         <div className="sochial-media-div">
-                            <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i className="fa-brands fa-facebook"></i></a>
-                            <a href="#"><i className="fa-brands fa-twitter"></i></a>
+                            <a href="#" aria-label="Icon"><i className="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Icon"><i className="fa-brands fa-facebook"></i></a>
+                            <a href="#" aria-label="Icon"><i className="fa-brands fa-twitter"></i></a>
                         </div>
                     </div>
 

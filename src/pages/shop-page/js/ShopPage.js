@@ -68,7 +68,7 @@ function ShopPage() {
                 <div className="game-img">
                     <img src={game.thumbnail} alt="game img" />
                     <div className="cover">
-                        <a href={game.game_url} title="Play Game"><i className="fa-solid fa-gamepad"></i></a>
+                        <a href={game.game_url} title="Play Game" aria-label="Icon"><i className="fa-solid fa-gamepad"></i></a>
                         <i className="fa-solid fa-heart love" onMouseOver={()=>{
                             document.querySelectorAll(".love").forEach(icon => icon.onclick = () => icon.classList.toggle("active"))
                         }}></i>
