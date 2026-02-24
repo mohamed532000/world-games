@@ -72,8 +72,10 @@ function CheckoutPage() {
                     <div className="input-div card-num">
                         <input type="text" placeholder="Credit Card Number" required/>
                     </div>
-                    <div className="date-of-order">
+                    <div className="date-of-order-and-card-info">
                         <input type="date"/>
+                        <input type="text" placeholder="MM/YY"/>
+                        <input type="text" placeholder="CVC"/>
                     </div>
 
                     <div className="order-summary-div">

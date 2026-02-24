@@ -80,8 +80,24 @@
 }
 .checkout-section .container  > form .input-div.email-div,
 .checkout-section .container  > form .input-div.card-name,
-.checkout-section .container  > form .input-div.card-num {
+.checkout-section .container  > form .input-div.card-num,
+.checkout-section .container  > form > .date-of-order-and-card-info {
     width: 80%;
+}
+.checkout-section .container  > form > .date-of-order-and-card-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+.checkout-section .container  > form > .date-of-order-and-card-info > input {
+    position: relative;
+    outline: none;
+    width: 200px;
+    height: 30px;
+    text-indent: 5px;
 }
 .checkout-section .container  > form .input-div > input {
     position: absolute;
@@ -141,8 +157,6 @@
 .select-pay-div > .pay-types .pay-type label > img {
     width: 40px;
 }
-
-
 
 .order-summary-div {
     position: relative;
@@ -343,6 +357,16 @@
     }
     .container > form > .submit-btn {
         padding: 12px 40px;
+    }
+}
+@media (max-width: 740px) {
+    .checkout-section .container > form > .date-of-order-and-card-info {
+        justify-content: center;
+        align-items: center;
+    }
+    .checkout-section .container > form > .date-of-order-and-card-info > input {
+        width: 100%;
+        height: 40px;
     }
 }
 

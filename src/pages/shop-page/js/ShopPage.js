@@ -6,7 +6,6 @@ import Ul from "../../../components/ul-list/js/Ul";
 import { useEffect , useState} from "react";
 import { useSelector , useDispatch } from "react-redux";
 import { fetchingDataFromApi } from "../../../project-state-and-actions/GamesReducer";
-// import { addProduct } from "../../../project-state-and-actions/AddToCartActions";
 import vrIMG from "../../../media/images/918766.png";
 import VrProducts from "../vr-products/js/VRProducts";
 
@@ -57,11 +56,7 @@ function ShopPage() {
                     activeProduct.classList.add("active");
                 });;
             }
-        })
-
-        let countriesName_url_api = "https://restcountries.com/v3.1/all";
-
-        fetch(countriesName_url_api).then(data => data.json()).then(finalData => setNamesOfCountries(finalData));
+        });
 
         dispatch(fetchingDataFromApi());
 
@@ -173,17 +168,17 @@ function ShopPage() {
                 <VrProducts />
                 </div>
                 <div className="sign-in-div">
-                    <button className="hide-sign-in-div" onClick={()=>{
-                        let signInDiv = document.querySelector(".sign-in-div");
-                        signInDiv.classList.remove("active");
-                    }}><i className="fa-solid fa-xmark"></i></button>
                     <div className="container sign-in-container">
                         <div className="sign-in-form-div">
+                            <img src="https://images.pexels.com/photos/2273875/pexels-photo-2273875.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""/>
+                            <button className="hide-sign-in-div" onClick={()=>{
+                                let signInDiv = document.querySelector(".sign-in-div");
+                                signInDiv.classList.remove("active");
+                            }}><i className="fa-solid fa-xmark"></i></button>
                             <div className="form-text">
                                 <h2>Hello !</h2>
                                 <h3>Sign Into Your Account</h3>
                             </div>
-
                             <form onSubmit={(e)=>{
                                 e.preventDefault();
                                 let askSection = document.querySelector(".shop-section .container.heading-container")
@@ -195,10 +190,10 @@ function ShopPage() {
 
                                     
                                     if(window.localStorage.length !== 0) {
-                                        let userEmail = JSON.parse(window.localStorage.getItem("userData")).userEmailValue;
-                                        let userPassword = JSON.parse(window.localStorage.getItem("userData")).passwordValue;
+                                        let userEmailFromLocalStorage = JSON.parse(window.localStorage.getItem("userData")).userEmailValue;
+                                        let userPasswordFromLocalStorage = JSON.parse(window.localStorage.getItem("userData")).passwordValue;
 
-                                        if(signInEmailValue === userEmail && signInPassword === userPassword) {
+                                        if(signInEmailValue === userEmailFromLocalStorage && signInPassword === userPasswordFromLocalStorage) {
                                             signInDiv.classList.remove("active");
                                             document.querySelector(".shop-section .parent-of-welcome-popub.sign-in-popub").classList.add("active");
                                             askSection.classList.add("hidden");
@@ -208,7 +203,7 @@ function ShopPage() {
                                             document.querySelector(".no-account-text").classList.add("active");
                                             setTimeout(()=>{
                                                 document.querySelector(".no-account-text").classList.remove("active");
-                                            },3000)
+                                            },3000);
                                         }
                                     }
                                     else {
@@ -223,10 +218,10 @@ function ShopPage() {
                             }}> 
                                 <p className="no-account-text">there is no account with {userEmail}</p>
                                 <div className="input-div sign-in-email-div">
-                                    <input type="email" placeholder="E-mail"/>
+                                    <input type="email" placeholder="E-mail" required/>
                                 </div>
                                 <div className="input-div sign-in-password-div">
-                                    <input type="password" placeholder="Password"/>
+                                    <input type="password" placeholder="Password" required/>
                                 </div>
                                 <div className="sign-in-or-reset">
                                     <input type="submit" value="sign in" className="sign-in-btn"/>
@@ -240,17 +235,17 @@ function ShopPage() {
                 </div>
                 <div className="sign-up-div">
                     <div className="container sign-up-container">
-                        <button className="hide-sign-in-div" onClick={()=>{
-                            let signUpDiv = document.querySelector(".sign-up-div");
-                            signUpDiv.classList.remove("active");
-                        }}><i className="fa-solid fa-xmark"></i></button>
-
                         <div className="form-div">
+                            <button className="hide-sign-up-div" onClick={()=>{
+                                let signUpDiv = document.querySelector(".sign-up-div");
+                                signUpDiv.classList.remove("active");
+                            }}><i className="fa-solid fa-xmark"></i></button>
+                            <img src="https://images.pexels.com/photos/2302802/pexels-photo-2302802.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
                             <form onSubmit={(e)=>{
                                 e.preventDefault();
                                 let userEmailValue = document.querySelector(".email-div input").value;
-                                let askSection = document.querySelector(".shop-section .container.heading-container")
-                                let welcomePopub = document.querySelector(".shop-section .parent-of-welcome-popub")
+                                let askSection = document.querySelector(".shop-section .container.heading-container");
+                                let welcomePopub = document.querySelector(".shop-section .parent-of-welcome-popub");
                                 let signUpDiv = document.querySelector(".sign-up-div");
                                 let passwordValue = document.querySelector(".password-div input").value;
                                 let confirmPassValue = document.querySelector(".confirm-pass-div input").value;
@@ -270,41 +265,22 @@ function ShopPage() {
                                     askSection.classList.add("hidden");
                                     welcomePopub.classList.add("active");
                                 }
-
                             }}>
                                 <div className="input-div">
                                     <input type="text" placeholder="First Name"/>
                                 </div>
-
                                 <div className="input-div">
                                     <input type="text" placeholder="Last Name"/>
                                 </div>
-                                <div className="input-div">
-                                    <input type="text" placeholder="Phone"/>
-                                </div>
-                                <div className="input-div country-div">
-                                    <label>Country</label>
-                                    <select>
-                                        {namesOfCountries.map(country => {
-                                            return (
-                                                <option>{country.name.common}</option>
-                                            )
-                                        })}
-                                    </select>
-                                </div>
-
                                 <div className="input-div email-div">
                                     <input type="email" placeholder="E-mail" required />
                                 </div>
-
                                 <div className="input-div password-div">
                                     <input type="text" placeholder="Password" required/>
                                 </div>
-
                                 <div className="input-div confirm-pass-div">
                                     <input type="text" placeholder="Confirm Password" required/>
                                 </div>
-
                                 <div className="create-or-reset-div">
                                     <input type="submit" value="create" className="create-input"/>
                                     <input type="reset" value="reset" className="reset-input"/>
