@@ -1,11 +1,29 @@
 import "../css/navbar.css";
-import { Link } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import wLogo from "../../../media/images/w_logo_by_zee_who_d6hy5hi-fullview.png";
 import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 function Nav() {
     let myState = useSelector(state => state);
     let countOfCartProducts = myState.AddToCartWorker.length;
-
+    let [userData , setUserData] = useState(null);
+    const navigate = useNavigate();
+    useEffect(() => {
+        let userDataFromStorage = window.localStorage.getItem("userData");
+        if(userDataFromStorage) {
+            setUserData(JSON.parse(userDataFromStorage))
+        }else {
+            setUserData(null)
+        }
+    },[])
+    let handleLogout = () => {
+        if(userData) {
+            window.localStorage.removeItem("userData");
+            window.localStorage.removeItem("hiddenClass");
+            setUserData(null);
+            navigate("/")
+        }
+    }
     return (
         <>
             <div className="nav" id="myNav">
@@ -67,7 +85,16 @@ function Nav() {
                             document.querySelector(".nav-icons i.cart-icon").classList.add("active");
 
                         }}>
-                        <i className="fa-solid fa-cart-shopping cart-icon Cart CartCheckoutPage CartCheckoutPageComplatedOrder"><span>{countOfCartProducts}</span></i></Link>                        
+                        <i className="fa-solid fa-cart-shopping cart-icon Cart CartCheckoutPage CartCheckoutPageComplatedOrder"><span>{countOfCartProducts}</span></i></Link>
+                        {
+                            userData
+                            ?
+                            <i className="fa-solid fa-arrow-right-from-bracket logout-icon"
+                            onClick={handleLogout}
+                            ></i>
+                            :
+                            ""
+                        }                
                     </div>
                 </div>
                 <div className="search-div">

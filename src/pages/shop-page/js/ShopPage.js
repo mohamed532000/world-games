@@ -109,7 +109,8 @@ function ShopPage() {
                             </div>
                             <button className="exploring-btn" onClick={()=>{
                                 setTimeout(()=>{
-                                    document.querySelector(".shop-section .parent-of-welcome-popub").classList.remove("active")
+                                    document.querySelector(".shop-section .parent-of-welcome-popub").classList.remove("active");
+                                    window.location.reload();
                                 },300)
                                 document.querySelector(".shop-section .parent-of-welcome-popub.sign-up-popub").classList.add("hidden-animate-class");
                                 document.querySelector(".parent-of-welcome-popub.sign-up-popub .welcome-popub").classList.add("hidden")
@@ -132,6 +133,7 @@ function ShopPage() {
                         }}>Start Exploring</button>
                     </div>
                 </div>
+                
                 <div className="container heading-container">
                     <img src={shopImg} alt=""/>
                     <span className="shop-cover"></span>
@@ -153,6 +155,8 @@ function ShopPage() {
                         </div>
                     </div>
                 </div>
+
+
                 <div className="container games-container">
                     <HeadingOfSections title={"Our Games"} info="Unleash Your Inner Gamer: Explore Our Epic Collection of Games."/>
                     {allGames}                    
@@ -183,13 +187,13 @@ function ShopPage() {
                                 let signInDiv = document.querySelector(".sign-in-div");
                                 let signInEmailValue = document.querySelector(".sign-in-email-div input").value;
                                 let signInPassword = document.querySelector(".sign-in-password-div input").value;
-                                
+                                console.log(signInEmailValue , signInPassword)
                                 if(signInEmailValue !== "" && signInPassword !== "") {
 
                                     
                                     if(window.localStorage.length !== 0) {
-                                        let userEmailFromLocalStorage = JSON.parse(window.localStorage.getItem("userData")).userEmailValue;
-                                        let userPasswordFromLocalStorage = JSON.parse(window.localStorage.getItem("userData")).passwordValue;
+                                        let userEmailFromLocalStorage = JSON.parse(window.localStorage.getItem("userData"))?.userEmailValue;
+                                        let userPasswordFromLocalStorage = JSON.parse(window.localStorage.getItem("userData"))?.passwordValue;
 
                                         if(signInEmailValue === userEmailFromLocalStorage && signInPassword === userPasswordFromLocalStorage) {
                                             signInDiv.classList.remove("active");

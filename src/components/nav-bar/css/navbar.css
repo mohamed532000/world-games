@@ -254,3 +254,7 @@
         transform: translateX(0);
     }
 }
+.logout-icon {
+    color: white;
+    cursor: pointer;
+}
